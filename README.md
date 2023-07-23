@@ -22,16 +22,20 @@ $> ./pipex file1 cmd1 cmd2 file2
 
 ### Instructions
 
-**1. Using it in your code**
+**1. Compiling the project**
 
-To use the function in your code, simply include its header:
-
-```C
-#include "get_next_line.h"
-```
-
-and, when compiling your code, add the source files and the required flag:
+To compile, go to the root path and run:
 
 ```shell
-get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=<size>
+$ make
 ```
+
+**2. Using the project**
+
+To use the function specify input files, cmd 1, cmd 2 and file.
+Example:
+
+```C
+./pipex Makefile cat "head -n 5" "wc -l" out
+```
+
